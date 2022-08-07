@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/online.store/static/css/main.d69b4f3e.css",
+    "main.js": "/online.store/static/js/main.68f656eb.js",
+    "static/media/shopping-bag.svg": "/online.store/static/media/shopping-bag.c2aaf2fafa4fa095521dad50002e9ad4.svg",
+    "static/media/crown.svg": "/online.store/static/media/crown.207ae289b221bfaca0108507f9bb2f85.svg",
+    "index.html": "/online.store/index.html",
+    "main.d69b4f3e.css.map": "/online.store/static/css/main.d69b4f3e.css.map",
+    "main.68f656eb.js.map": "/online.store/static/js/main.68f656eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d69b4f3e.css",
+    "static/js/main.68f656eb.js"
+  ]
+}
