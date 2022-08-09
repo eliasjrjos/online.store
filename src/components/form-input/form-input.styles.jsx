@@ -1,16 +1,9 @@
 import styled, { css } from "styled-components";
 
 const shrinkFormInputStyle = css`
-    background-color: white;
-    visibility: hidden;
+    top: -14px;
+    font-size: 12px;
     color: black;
-    border: 1px solid black;
-
-    &:hover {
-        background-color: black;
-        color: white;
-        border: none;
-    }
 `;
 
 const basicFormInputStyle = css`
@@ -25,6 +18,22 @@ export const GroupStyle = styled.div`
     input[type='password'] {
         letter-spacing: 0.3em;
     }
+`;
+
+const getFormInputStyle = props => {
+    return props.value.length ? shrinkFormInputStyle : basicFormInputStyle;
+}
+
+export const FormInputLabel = styled.label`
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+    
+    ${getFormInputStyle}
 `;
 
 export const FormInputStyle = styled.input`
@@ -43,25 +52,10 @@ export const FormInputStyle = styled.input`
     &:focus {
         outline: none;
     }
-    &:focus {
+    &:focus ~ ${FormInputLabel}{
         top: -14px;
         font-size: 12px;
         color: black;
     }
-`;
 
-const getFormInputStyle = props => {
-    return props.value.length ? shrinkFormInputStyle : basicFormInputStyle;
-}
-
-export const FormInputLabel = styled.label`
-    font-size: 16px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 300ms ease all;
-
-    ${getFormInputStyle}
 `;
